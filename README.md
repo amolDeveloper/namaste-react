@@ -1,4 +1,6 @@
 # Namaste React 
+- React to create element
+- ReactDOM to render react elements
 
 # Parcel
 - Dev Build
@@ -13,3 +15,13 @@
 - Consistent Hashing
 - Code Splitting
 - Differential Bundling
+
+# JSX
+- JSX is not HTML in Javascript
+- JSX is HTML like Syntax
+- Use camelCase for attributes in JSX
+- Babel transpiles JSX to React Element
+
+# React Functional Component
+- JS function returning React ELement
+- call any JS expression inside {} brackets
