@@ -1,0 +1,14 @@
+{
+  "name": "y",
+  "version": "1.0.0",
+  "description": "Namaste React By Author Amol Kodge",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Amol Kodge",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.9.3"
+  }
+}
