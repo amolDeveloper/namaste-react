@@ -1,3 +1,61 @@
 .header {
-    color: green;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+    background: lightgray;
+}
+
+.logo {
+    width: 100px;
+    margin: 10px;
+}
+
+.nav-items > ul {
+    display: flex;
+    padding: 0 20px;
+}
+
+.nav-items > ul > li {
+    padding: 10px;
+    margin: 10px;
+    list-style: none;
+}
+
+.body {
+    border: 1px solid black;
+    margin: 10px 0;
+}
+
+.search-bar {
+    display: flex;
+    margin: 10px;
+    justify-content: center;
+}
+
+.search-bar button {
+    margin: 0 10px;
+}
+
+.res-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px 0;
+}
+
+.res-card {
+    background-color: beige;
+    height: 350px;
+    width: 210px;
+    padding: 5px;
+    margin: 10px;
+}
+
+.res-card:hover {
+    border: 1px solid coral;
+    box-shadow: 5px 10px 18px lightcoral;
+    cursor: pointer;
+}
+
+.res-card-logo {
+    width: 100%;
 }

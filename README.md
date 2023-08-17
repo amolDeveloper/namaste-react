@@ -25,3 +25,7 @@
 # React Functional Component
 - JS function returning React ELement
 - call any JS expression inside {} brackets
+
+# Config Driven UI
+- Data will build the UI
+- Never use index as unique key while looping
