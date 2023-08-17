@@ -29,3 +29,15 @@
 # Config Driven UI
 - Data will build the UI
 - Never use index as unique key while looping
+
+# Two Types of Export and Import
+- default export 
+- named export
+
+# Hooks
+- useState - Whenever state variable updates, react rerenders the component (Super Powerful Variable)
+- npm install typescript - if react module not found error appears
+- Reconciliation Algorithm (React Fibre)
+- Virtual DOM (representation of Actual DOM)
+- React is fast becuase it compares diff between two objects(old and new virtual DOM).
+- Efficient DOM Manipulation by React makes it even faster.

@@ -1,8 +1,8 @@
-export const resList = [
+const resList = [
    {
       "name": "Bharawan Da Dhaba",
       "rating": "4.4",
-      "rating_count": "50+ ratings",
+      "rating_count": "50 ratings",
       "cost": "₹ 300",
       "address": "Bharawan Da Dhaba, rimpy bakery 12 circular road main bazar abohar",
       "cuisine": "Indian",
@@ -12,7 +12,7 @@ export const resList = [
     {
       "name": "shere punjab veg",
       "rating": "4.0",
-      "rating_count": "100+ ratings",
+      "rating_count": "100 ratings",
       "cost": "₹ 150",
       "address": "shere punjab veg, major surinder chowk near verma sons petrol pump and lic building abohar",
       "cuisine": "North Indian",
@@ -22,7 +22,7 @@ export const resList = [
     {
       "name": "Sethi Milk Badam",
       "rating": "4.2",
-      "rating_count": "20+ ratings",
+      "rating_count": "20 ratings",
       "cost": "₹ 100",
       "address": "Sethi Milk Badam, main bazar street no 11 abohar",
       "cuisine": "Sweets,Desserts",
@@ -31,8 +31,8 @@ export const resList = [
     },
     {
       "name": "Jodhpuri Kachori",
-      "rating": "--",
-      "rating_count": "Too Few Ratings",
+      "rating": "3.2",
+      "rating_count": "99 ratings",
       "cost": "₹ 100",
       "address": "Jodhpuri Kachori, mandi 1 street no 4 main bazar near sbi bank abohar",
       "cuisine": "Snacks",
@@ -42,7 +42,7 @@ export const resList = [
     {
       "name": "Hinglaj Kachori Bhandhar",
       "rating": "4.2",
-      "rating_count": "20+ ratings",
+      "rating_count": "20 ratings",
       "cost": "₹ 100",
       "address": "Hinglaj Kachori Bhandhar, street no 11 circular road ,Abohar",
       "cuisine": "Snacks,Chaat",
@@ -51,8 +51,8 @@ export const resList = [
     },
     {
       "name": "Tandoori Nights",
-      "rating": "--",
-      "rating_count": "Too Few Ratings",
+      "rating": "4.1",
+      "rating_count": "80 ratings",
       "cost": "₹ 300",
       "address": "Tandoori Nights, near civil hospital canteen abohar",
       "cuisine": "Tandoor",
@@ -61,8 +61,8 @@ export const resList = [
     },
     {
       "name": "yummy hub",
-      "rating": "--",
-      "rating_count": "Too Few Ratings",
+      "rating": "2.2",
+      "rating_count": "7 ratings",
       "cost": "₹ 200",
       "address": "yummy hub, hanumangarh road near dr naveen sethi hospitalabohar",
       "cuisine": "Indian",
@@ -71,8 +71,8 @@ export const resList = [
     },
     {
       "name": "wah ji waah veg and non veg corner",
-      "rating": "--",
-      "rating_count": "Too Few Ratings",
+      "rating": "1.3",
+      "rating_count": "300 ratings",
       "cost": "₹ 200",
       "address": "wah ji waah veg and non veg corner, Hanuman garh road, Down the flyover. Near Dr.Navin Sheety Abohar",
       "cuisine": "North Indian,Chinese",
@@ -81,7 +81,7 @@ export const resList = [
     {
       "name": "theka coffee desi",
       "rating": "3.8",
-      "rating_count": "100+ ratings",
+      "rating_count": "100 ratings",
       "cost": "₹ 100",
       "address": "theka coffee desi, sahtiya sadan road city",
       "cuisine": "Beverages",
@@ -91,7 +91,7 @@ export const resList = [
     {
       "name": "Sam Uncle",
       "rating": "3.6",
-      "rating_count": "20+ ratings",
+      "rating_count": "20 ratings",
       "cost": "₹ 200",
       "address": "Sam Uncle, hanumangarh road near raja bajaj showroom abohar",
       "cuisine": "Continental",
@@ -101,7 +101,7 @@ export const resList = [
     {
       "name": "Singh Hut",
       "rating": "3.7",
-      "rating_count": "20+ ratings",
+      "rating_count": "20 ratings",
       "cost": "₹ 250",
       "address": "Singh Hut, CIRCULAR ROAD NEAR NEHRU PARK ABOHAR",
       "cuisine": "Fast Food,Indian",
@@ -110,8 +110,8 @@ export const resList = [
     },
     {
       "name": "Shri Balaji Vaishno Dhaba",
-      "rating": "--",
-      "rating_count": "Too Few Ratings",
+      "rating": "3.7",
+      "rating_count": "81 ratings",
       "cost": "₹ 100",
       "address": "Shri Balaji Vaishno Dhaba, St no 13,6th chowk,main Bazar,near jain bhawan, abohar",
       "cuisine": "North Indian",
@@ -120,8 +120,8 @@ export const resList = [
     },
     {
       "name": "Swastik Dhaba",
-      "rating": "--",
-      "rating_count": "Too Few Ratings",
+      "rating": "2.9",
+      "rating_count": "33 ratings",
       "cost": "₹ 200",
       "address": "Swastik Dhaba, Gaushala road street no 22 near shiv mandir abohar",
       "cuisine": "North Indian",
@@ -131,7 +131,7 @@ export const resList = [
     {
       "name": "Roll Express",
       "rating": "4.0",
-      "rating_count": "20+ ratings",
+      "rating_count": "20 ratings",
       "cost": "₹ 200",
       "address": "Roll Express, Roll Express, Opposite Dr. Sarla Sethi Hospital, Near DAV College, Hanumangarh Road, Abohar",
       "cuisine": "Fast Food",
@@ -140,8 +140,8 @@ export const resList = [
     },
     {
       "name": "CHAWLA SAAB THE JUICE MASTER",
-      "rating": "--",
-      "rating_count": "Too Few Ratings",
+      "rating": "1.9",
+      "rating_count": "10 ratings",
       "cost": "₹ 300",
       "address": "CHAWLA SAAB THE JUICE MASTER, SAHITYA SADAN MARKET, ABOHAR ,  Abohar (M Cl) , Fazilka 1(Abohar), Fazilka,  Punjab-152116",
       "cuisine": "Juices,Beverages",
@@ -150,8 +150,8 @@ export const resList = [
     },
     {
       "name": "Rahul Food",
-      "rating": "--",
-      "rating_count": "Too Few Ratings",
+      "rating": "4.5",
+      "rating_count": "56 ratings",
       "cost": "₹ 300",
       "address": "Rahul Food, Kandhwala Road, Near Gurudwara Saheb, Abohar",
       "cuisine": "North Indian,Snacks",
@@ -161,7 +161,7 @@ export const resList = [
     {
       "name": "Janta Sweet House",
       "rating": "4.4",
-      "rating_count": "50+ ratings",
+      "rating_count": "50 ratings",
       "cost": "₹ 200",
       "address": "Janta Sweet House, Bazar No.9, Circullar Road, Abohar",
       "cuisine": "Sweets,Bakery",
@@ -170,8 +170,8 @@ export const resList = [
     },
     {
       "name": "AB FOODS POINT",
-      "rating": "--",
-      "rating_count": "Too Few Ratings",
+      "rating": "4.5",
+      "rating_count": "0 ratings",
       "cost": "₹ 200",
       "address": "AB FOODS POINT, NEAR RISHI NARANG DENTAL CLINIC , NEAR IDBI BANK, ABOHAR",
       "cuisine": "Beverages,Pizzas",
@@ -179,3 +179,5 @@ export const resList = [
       "link": "https://www.swiggy.com/restaurants/ab-foods-point-central-abohar-abohar-567335"
     }
 ]
+
+export default resList;
