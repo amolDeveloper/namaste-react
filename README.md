@@ -41,3 +41,9 @@
 - Virtual DOM (representation of Actual DOM)
 - React is fast becuase it compares diff between two objects(old and new virtual DOM).
 - Efficient DOM Manipulation by React makes it even faster.
+
+# Architecture types
+- Monolith Architecture (old type - all under one)
+- Microservice Architecture (new trend - separate service for each task)
+- Microservice Architecture follows single responsibility principe and separation of concerns.
+ 
