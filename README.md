@@ -46,4 +46,9 @@
 - Monolith Architecture (old type - all under one)
 - Microservice Architecture (new trend - separate service for each task)
 - Microservice Architecture follows single responsibility principe and separation of concerns.
- 
+
+# Use State & Effect Hook
+- If no dependency array is present , useEffect will be called on each component render.
+- If dependency array is empty ([]), it will be called only once on initail component render. 
+- If dependency array has some value, it will be called every time value gets updated.
+- Always call useState inside functional component on the top.

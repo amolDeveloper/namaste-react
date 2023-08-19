@@ -2,12 +2,12 @@
 import Shimmer from "./Shimmer";
 import { UserCard } from "./Users";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Body = () => {
-
+    //local state variable declaration
     let [listOfUsers, setListOfUsers] = useState([]);
     let [filteredListOfUsers, setfilteredListOfUsers] = useState([]);
-
     let [searchText, setsearchText] = useState('');
 
     useEffect(() => {
@@ -24,7 +24,7 @@ const Body = () => {
     function clickHandler() {
         let filteredUsers = [];
         filteredUsers = listOfUsers.filter((user) => user?.id > 5);
-        setListOfUsers(filteredUsers);
+        setfilteredListOfUsers(filteredUsers);
     }
 
     function searchHandler() {
@@ -36,6 +36,7 @@ const Body = () => {
     return listOfUsers.length === 0 ? 
             (<h1><Shimmer /></h1>) : 
             (<div className="body">
+                <h1>Ep: 07 upto 1 hour completed</h1>
                 <div className="actions">
                     <div className="search">
                         <input type="text"  value={searchText} onChange={(e) => setsearchText(e.target.value)}/>
@@ -44,7 +45,13 @@ const Body = () => {
                     <button type="button" onClick={() => clickHandler()}> Top Rated Users </button>
                 </div>
                 <div className="res-container">
-                    {filteredListOfUsers.map(user => (<UserCard key={user.id} userData={user}/>))}
+                    {filteredListOfUsers.map(user => 
+                        (
+                        <Link key={user.id} to={"/users/" + user.id}>
+                            <UserCard userData={user}/>
+                        </Link>
+                        )
+                    )}
                 </div>
             </div>)
 } 
