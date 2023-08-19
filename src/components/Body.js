@@ -11,8 +11,19 @@ const Body = () => {
     let [searchText, setsearchText] = useState('');
 
     useEffect(() => {
+        console.log('func use effect');
         fetchData();
+        const timer = setInterval(() => {
+            // console.log('Body Functional Timer')
+        },1000)
+
+        return () => {
+            console.log('func will unmount');
+            clearInterval(timer)
+        }
     },[])
+
+    console.log('func render');
 
     fetchData = async() => {
         const data = await fetch("https://jsonplaceholder.typicode.com/users")
@@ -36,7 +47,6 @@ const Body = () => {
     return listOfUsers.length === 0 ? 
             (<h1><Shimmer /></h1>) : 
             (<div className="body">
-                <h1>Ep: 07 upto 1 hour completed</h1>
                 <div className="actions">
                     <div className="search">
                         <input type="text"  value={searchText} onChange={(e) => setsearchText(e.target.value)}/>

@@ -1,8 +1,10 @@
+import UserDetails from "./UserDetails";
+
 const About = () => {
     return (
         <div>
             <h1>About Us</h1>
-            <h2>Namaste React</h2>
+            <UserDetails />
         </div>
     )
 }

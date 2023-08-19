@@ -52,3 +52,12 @@
 - If dependency array is empty ([]), it will be called only once on initail component render. 
 - If dependency array has some value, it will be called every time value gets updated.
 - Always call useState inside functional component on the top.
+
+
+# Class based Component and life cycle hooks
+- Render Phase (Contructor and render call back)
+- Commit Phase (DOM update and component did mount call back)
+- Mounting, Updating and Unmounting phases
+- componendDidMount is called after first render
+- componentDidUpdate is called after every render
+- componentWillUnmount will be called once the component is removed from html.
