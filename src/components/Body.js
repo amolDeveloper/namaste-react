@@ -50,14 +50,14 @@ const Body = () => {
     return listOfUsers.length === 0 ? 
             (<h1><Shimmer /></h1>) : 
             (<div className="body">
-                <div className="actions">
-                    <div className="search">
-                        <input type="text"  value={searchText} onChange={(e) => setsearchText(e.target.value)}/>
-                        <button type="button" onClick={(e) => searchHandler()}>Search</button>
+                <div className="flex justify-center">
+                    <div className="flex">
+                        <input className="m-1 border-solid border-2 border-black rounded-md" type="text"  value={searchText} onChange={(e) => setsearchText(e.target.value)}/>
+                        <button type="button" className="p-1 m-1 hover:text-black  text-white font-bold rounded-md bg-orange-300 hover:bg-orange-400" onClick={(e) => searchHandler()}>Search</button>
                     </div>
-                    <button type="button" onClick={() => clickHandler()}> Top Rated Users </button>
+                    <button type="button" className="p-1 m-1 hover:text-black font-bold text-white rounded-md bg-gray-300 hover:bg-gray-400" onClick={() => clickHandler()}> Top Rated Users </button>
                 </div>
-                <div className="res-container">
+                <div className="flex m-4 flex-wrap">
                     {filteredListOfUsers.map(user => 
                         (
                         <Link key={user.id} to={"/users/" + user.id}>

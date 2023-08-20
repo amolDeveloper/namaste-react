@@ -45,18 +45,18 @@ class UserDetails extends React.Component {
         let {count} = this.state;
         const {name, location, bio, avatar_url} = this.state.userData;
         return (
-            <div className="user-details">
-                <img src={avatar_url} />
-                <h1>Name: {name}</h1>
+            <div className="m-4 p-4 bg-gray-300 rounded-lg shadow-lg">
+                <img className="w-32 m-2" src={avatar_url} />
+                <h1 className="font-bold">Name: {name}</h1>
                 <h2>Location: {location}</h2>
                 <h3>Bio: {bio}</h3>
                 <h4>Count: {count}</h4>
-                <button className="increase" onClick={() => {
+                <button className="m-1 p-1 text-white font-bold rounded-md bg-green-500 hover:bg-green-700" onClick={() => {
                     this.setState({
                         count: count + 1
                     })
                 }}>Increase Count</button>
-                <button className="decrease" onClick={() => {
+                <button className="m-1 p-1 text-white font-bold rounded-md bg-red-500 hover:bg-red-700" onClick={() => {
                     this.setState({
                         count: count - 1
                     })
