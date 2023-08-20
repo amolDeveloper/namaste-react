@@ -22,6 +22,10 @@
     list-style: none;
 }
 
+.nav-items > ul > .status {
+    cursor: unset;
+}
+
 .nav-items > ul > li > a {
     text-decoration: none;
 }

@@ -3,6 +3,7 @@ import Shimmer from "./Shimmer";
 import { UserCard } from "./Users";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import UseOnlineStatus from '../utils/UseOnlineStatus';
 
 const Body = () => {
     //local state variable declaration
@@ -43,6 +44,8 @@ const Body = () => {
         filteredUsers = listOfUsers.filter((user) => user?.name?.toLowerCase().includes(searchText.toLowerCase()));
         setfilteredListOfUsers(filteredUsers);
     }
+
+    if (!UseOnlineStatus()) return <h1>Looks like you are Offline!</h1>
 
     return listOfUsers.length === 0 ? 
             (<h1><Shimmer /></h1>) : 

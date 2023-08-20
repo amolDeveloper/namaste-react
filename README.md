@@ -52,6 +52,7 @@
 - If dependency array is empty ([]), it will be called only once on initail component render. 
 - If dependency array has some value, it will be called every time value gets updated.
 - Always call useState inside functional component on the top.
+- useState (react), useEffect (react), useParams (react-router-dom)
 
 
 # Class based Component and life cycle hooks

@@ -1,20 +1,11 @@
-import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
 import { useParams } from "react-router-dom";
+import UsePost from "../utils/UsePost";
 
 const Post = () => {
     const {userId} = useParams();
-    const [ posts, setPosts] = useState(null);
 
-    useEffect(() => {
-        fetchData();
-    },[])
-
-    fetchData = async() => {
-        const data = await fetch("https://jsonplaceholder.typicode.com/posts/" + userId)
-        const response = await data.json();
-        setPosts(response);
-    }
+    let posts = UsePost(userId);
 
     return posts === null ? <Shimmer /> : (
         <div className="post-container">
