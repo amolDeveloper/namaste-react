@@ -1,15 +1,19 @@
 
 import Shimmer from "./Shimmer";
-import { UserCard } from "./Users";
-import { useState, useEffect } from "react";
+import  UserCard, {withRated} from "./Users";
+import { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import UseOnlineStatus from '../utils/UseOnlineStatus';
+import UserContext from "../utils/UserContext";
 
 const Body = () => {
     //local state variable declaration
     let [listOfUsers, setListOfUsers] = useState([]);
     let [filteredListOfUsers, setfilteredListOfUsers] = useState([]);
     let [searchText, setsearchText] = useState('');
+    const { loggedInUser, setUserName } = useContext(UserContext);
+
+    const RatedUserCard = withRated(UserCard);
 
     useEffect(() => {
         console.log('func use effect');
@@ -35,7 +39,7 @@ const Body = () => {
 
     function clickHandler() {
         let filteredUsers = [];
-        filteredUsers = listOfUsers.filter((user) => user?.id > 5);
+        filteredUsers = listOfUsers.filter((user) => user?.id%2 === 0);
         setfilteredListOfUsers(filteredUsers);
     }
 
@@ -56,12 +60,16 @@ const Body = () => {
                         <button type="button" className="p-1 m-1 hover:text-black  text-white font-bold rounded-md bg-orange-300 hover:bg-orange-400" onClick={(e) => searchHandler()}>Search</button>
                     </div>
                     <button type="button" className="p-1 m-1 hover:text-black font-bold text-white rounded-md bg-gray-300 hover:bg-gray-400" onClick={() => clickHandler()}> Top Rated Users </button>
+                    <div>
+                        <label className="font-bold">UserName : </label>
+                        <input className="p-1 m-1 border-solid border-2 border-black rounded-md" value={loggedInUser} type="text" onChange={(e) => setUserName(e.target.value)}/>
+                    </div>
                 </div>
                 <div className="flex m-4 flex-wrap">
                     {filteredListOfUsers.map(user => 
                         (
                         <Link key={user.id} to={"/users/" + user.id}>
-                            <UserCard userData={user}/>
+                            { user.id%2 === 0 ? <RatedUserCard userData={user}/> : <UserCard userData={user}/> }
                         </Link>
                         )
                     )}

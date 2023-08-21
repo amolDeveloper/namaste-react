@@ -62,3 +62,6 @@
 - componendDidMount is called after first render
 - componentDidUpdate is called after every render
 - componentWillUnmount will be called once the component is removed from html.
+
+# Higher Order Component
+- HOC is a function that takes an component as an input and returns back a component.

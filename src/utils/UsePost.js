@@ -8,7 +8,7 @@ const UsePost = (postId) => {
     }, [])
 
     fetchData = async () => {
-        const data = await fetch("https://jsonplaceholder.typicode.com/posts/" + postId);
+        const data = await fetch("https://jsonplaceholder.typicode.com/posts/" + postId + "/comments");
         const response = await data.json();
         setPosts(response);
     }

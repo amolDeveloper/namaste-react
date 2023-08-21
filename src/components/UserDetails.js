@@ -1,4 +1,5 @@
 import React from "react";
+import UserContext from "../utils/UserContext";
 
 class UserDetails extends React.Component {
 
@@ -51,6 +52,9 @@ class UserDetails extends React.Component {
                 <h2>Location: {location}</h2>
                 <h3>Bio: {bio}</h3>
                 <h4>Count: {count}</h4>
+                    <UserContext.Consumer>
+                        {(data) => <h5>User:- {data.loggedInUser}</h5> }
+                    </UserContext.Consumer>
                 <button className="m-1 p-1 text-white font-bold rounded-md bg-green-500 hover:bg-green-700" onClick={() => {
                     this.setState({
                         count: count + 1

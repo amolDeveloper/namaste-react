@@ -1,11 +1,14 @@
 import { LOGO_URL } from "../utils/constants";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import UseOnlineStatus from "../utils/UseOnlineStatus";
+import UserContext from "../utils/UserContext";
 
 const Header = () => {
     //local state variable declaration
     const [btnName, setbtnName] = useState('Login');
+
+    const { loggedInUser } = useContext(UserContext);
 
     // 1) called on after each render
     // useEffect(() => {
@@ -38,6 +41,7 @@ const Header = () => {
                     <button className="p-2 font-bold rounded-md bg-orange-300 hover:bg-orange-400" onClick={() => {
                         btnName === 'Login' ? setbtnName('Logout') : setbtnName('Login')
                     }}>{btnName}</button>
+                    <li className="m-2 font-bold">{loggedInUser}</li>
                 </ul>
             </div>
         </div>
