@@ -65,3 +65,12 @@
 
 # Higher Order Component
 - HOC is a function that takes an component as an input and returns back a component.
+
+# Redux
+- React and Redux are two separate libararies.
+- Install @reduxjs/toolkit and react-redux.
+- Build our store and connect to our app.
+- create a Cart slice to add items to cart.
+- click event dispatches an action which calls a function which inturn modifies the state slice.
+- function is known as Reducer which modifies the state of redux store.
+- Use selector to read modified data from store and modify UI (subscribing to the store);

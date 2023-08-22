@@ -3,6 +3,7 @@ import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import UseOnlineStatus from "../utils/UseOnlineStatus";
 import UserContext from "../utils/UserContext";
+import { useSelector } from "react-redux";
 
 const Header = () => {
     //local state variable declaration
@@ -24,6 +25,9 @@ const Header = () => {
     // useEffect(() => {
     //     console.log('with some value in dependency array');
     // },[btnName]);
+
+    //selector to read cart items
+    const cart = useSelector((store) => store.cart.items);
     
     return ( 
         <div className="flex m-4 justify-between bg-pink-200 rounded-lg shadow-lg">
@@ -37,7 +41,7 @@ const Header = () => {
                     <li className="m-2"><Link to="/about">About Us</Link></li>
                     <li className="m-2"><Link to="/contact">Contact Us</Link></li>
                     <li className="m-2"><Link to="/grocery">Grocery</Link></li>
-                    <li className="m-2">Cart</li>
+                    <li className="m-2 font-bold text-lg"><Link to="/cart">Cart</Link>({cart?.length} items) </li>
                     <button className="p-2 font-bold rounded-md bg-orange-300 hover:bg-orange-400" onClick={() => {
                         btnName === 'Login' ? setbtnName('Logout') : setbtnName('Login')
                     }}>{btnName}</button>
