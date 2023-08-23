@@ -31,7 +31,7 @@ const Body = () => {
     console.log('func render');
 
     fetchData = async() => {
-        const data = await fetch("https://jsonplaceholder.typicode.com/users")
+        const data = await fetch("https://jsonplaceholder.typicode.com/users");
         const response = await data.json();
         setListOfUsers(response);
         setfilteredListOfUsers(response);
@@ -56,7 +56,7 @@ const Body = () => {
             (<div className="body">
                 <div className="flex justify-center">
                     <div className="flex">
-                        <input className="m-1 border-solid border-2 border-black rounded-md" type="text"  value={searchText} onChange={(e) => setsearchText(e.target.value)}/>
+                        <input data-testid="searchInput" className="m-1 border-solid border-2 border-black rounded-md" type="text"  value={searchText} onChange={(e) => setsearchText(e.target.value)}/>
                         <button type="button" className="p-1 m-1 hover:text-black  text-white font-bold rounded-md bg-orange-300 hover:bg-orange-400" onClick={(e) => searchHandler()}>Search</button>
                     </div>
                     <button type="button" className="p-1 m-1 hover:text-black font-bold text-white rounded-md bg-gray-300 hover:bg-gray-400" onClick={() => clickHandler()}> Top Rated Users </button>

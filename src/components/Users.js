@@ -6,7 +6,7 @@ const UserCard = (props) => {
     const { userData } = props;
     const { loggedInUser } = useContext(UserContext);
     return (
-        <div className="m-4 p-4 w-60 h-70 bg-gray-200 hover:bg-gray-500 hover:text-white rounded-lg">
+        <div data-testid="userCard" className="m-4 p-4 w-60 h-70 bg-gray-200 hover:bg-gray-500 hover:text-white rounded-lg">
             <img className="res-card-logo" src={CDN_URL} />
             <h3 className="font-bold"> {userData.name} </h3>
             <h4> {userData.username} </h4>

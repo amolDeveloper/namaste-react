@@ -14,11 +14,12 @@ const Post = () => {
         <div>
             <h1 className="font-bold text-center"> Comments  </h1>
             {posts.map((comment, index) => 
-                (
-                    <Comment    key={comment.id} 
-                                commentData={comment} 
-                                showIndex={activeIndex === index ? true : false}
-                                setActiveIndex={() => setActiveIndex(index)}/>
+                (   
+                    <div key={comment.id} data-testid="comments">
+                        <Comment    commentData={comment} 
+                                    showIndex={activeIndex === index ? true : false}
+                                    setActiveIndex={() => setActiveIndex(index)}/>
+                    </div>
                 )
             )}
         </div>

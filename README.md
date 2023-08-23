@@ -74,3 +74,21 @@
 - click event dispatches an action which calls a function which inturn modifies the state slice.
 - function is known as Reducer which modifies the state of redux store.
 - Use selector to read modified data from store and modify UI (subscribing to the store);
+
+# Types of testing (developer)
+- Unit Testing
+- Integration Testing
+- End to End (e2e) Testing
+
+# Testing set up
+- Install react testing librart (npm install --save-dev @testing-library/react)
+- Install jest (npm install --save-dev jest)
+- Install babel dependency (npm install --save-dev babel-jest @babel/core @babel/preset-env)
+- Configure babel - create babel.config.js 
+- Configure Parcel -create .parcelrc file to disable default babel transpilation so that jest can pick it up from babel.config.js
+- Jest Configuration (npx jest init).
+- Install jsdom library (npm install --save-dev jest-environment-jsdom)
+- Install @babel/preset-react (npm install --save-dev @babel/preset-react)
+- Configure @babel/preset-react in babel.config.js
+- Install jest dom (npm install --save-dev @testing-library/jest-dom)
+- Add jest --watch to package.json to run tests continuously
